@@ -20,8 +20,13 @@ module.exports = {
     ],
   },
   create(context) {
+    const config = context.settings.i18n;
     const [options] = context.options;
     const { attributes } = options || {};
+
+    if (config && config.ignoreFiles && minimatch(context.getFilename(), config.ignoreFiles)) {
+      return {};
+    }
 
     return {
       JSXAttribute(node) {
