@@ -7,7 +7,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/M6Web/eslint-plugin-m6web-i18n.git"
+    "url": "https://github.com/bignimbus/eslint-plugin-m6web-i18n.git"
   },
   "scripts": {
     "build": "babel src --out-dir lib",
