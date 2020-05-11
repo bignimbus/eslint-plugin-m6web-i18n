@@ -1,3 +1,5 @@
+const minimatch = require('minimatch');
+
 module.exports = {
   meta: {
     docs: {
