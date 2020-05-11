@@ -31,7 +31,7 @@ module.exports = {
     return {
       JSXElement(node) {
         node.children.forEach(child => {
-          if (child.type === 'Literal') {
+          if (['Literal', 'JSXText'].indexOf(child.type)) {
             const text = child.value.trim().replace('\\n', '');
             if (text.length && (!ignorePattern || !new RegExp(ignorePattern).test(text))) {
               context.report({
